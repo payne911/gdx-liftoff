@@ -1,11 +1,7 @@
-package com.github.czyzby.setup.views
+package com.github.payne.generator.model
 
-import com.badlogic.gdx.files.FileHandle
+import com.badlogic.gdx.files.FileHandle // todo: replace those by Strings?
 
-/**
- * Filled by the LML parser, this class contains references to basic project data widgets.
- * @author MJ
- */
 class BasicProjectData(val name: String /* nameField.text */,
                        val rootPackage: String /* rootPackageField.text */,
                        val mainClass: String /* mainClassField.text */,
