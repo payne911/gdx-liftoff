@@ -59,7 +59,7 @@
           "shared"
         ]
       },
-      "default": "core"
+      "default": ["core"]
     },
 
     "languages": {
@@ -163,6 +163,7 @@
           "type": "string"
         }
       },
+      "$comment": "A default empty object should (?) create an object with the defaults defined above",
       "default": {}
     },
 
