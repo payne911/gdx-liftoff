@@ -7,8 +7,12 @@ import com.github.czyzby.setup.data.project.Project
  * Gradle file of the root project. Manages build script and global settings.
  * @author MJ
  */
-class RootGradleFile(val project: Project) : GradleFile("") {
-    val plugins = mutableSetOf<String>()
+class RootGradleFile(val hasAndroidPlatform: Boolean,
+                     val javaVersion: String,
+                     val projectName: String,
+                     val advancedProjectVersion: String // todo: change that name
+) : GradleFile("") {
+    val plugins = mutableSetOf<String>() // selected languages
     val buildRepositories = mutableSetOf<String>()
 
     init {
@@ -32,21 +36,21 @@ allprojects {
 	apply plugin: 'idea'
 }
 
-configure(subprojects${if (project.hasPlatform(Android.ID)) {
+configure(subprojects${if (hasAndroidPlatform) {
         " - project(':android')"
     } else {
         ""
     }}) {
 ${plugins.joinToString(separator = "\n") { "	apply plugin: '$it'" }}
-	sourceCompatibility = ${project.advanced.javaVersion}
+	sourceCompatibility = $javaVersion
 	compileJava {
 		options.incremental = true
 	}
 }
 
 subprojects {
-	version = '${project.advanced.version}'
-	ext.appName = '${project.basic.name}'
+	version = '${advancedProjectVersion}'
+	ext.appName = '${projectName}'
 	repositories {
 		mavenLocal()
 		mavenCentral()
