@@ -1,7 +1,7 @@
 # The idea
-The ``generator`` module was supposed to handle the logic contained within the ``Project#generate`` method.
+The ``generator`` module was supposed to handle the logic contained within the ``Project#generate`` method of the ``gui`` module.
 
-Instead, ``Project#generate`` should create an immutable Model comprised of primitives.
+Instead, ``Project#generate`` should create an immutable Model comprised of primitives and send that over to the Generator.
 
 Using that Model, the Generator should be able to create (via a refactor of `ProjectFile#save`) and return a virtual file structure (as defined by the ``IGenerator`` interface).
 
