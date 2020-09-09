@@ -24,4 +24,4 @@ With the suggested approach, it becomes doable to have many different usage of t
 * A GWT WebApp could import the generator as a source and generate a project structure directly
 
 # JSON Schema
-Please see the ``liftoff-json-schema.json`` in the resources.
+Please see the [``liftoff-json-schema.json``](https://github.com/payne911/gdx-liftoff/blob/extracting-generator/generator/src/main/resources/json/liftoff-json-schema.json) in the resources.
