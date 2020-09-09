@@ -16,7 +16,6 @@ import com.github.czyzby.setup.views.ExtensionsData
 import com.github.czyzby.setup.views.LanguagesData
 import com.kotcrab.vis.ui.util.OsUtils
 import java.io.BufferedReader
-import java.io.File
 import java.io.InputStreamReader
 
 /**
