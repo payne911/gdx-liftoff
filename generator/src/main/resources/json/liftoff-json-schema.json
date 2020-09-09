@@ -1,7 +1,7 @@
 {
   "$comment": "See 'JSON Schema Mappings' in IntelliJ to apply schema as a validator.",
   "$comment": "Use  { http://www.jsonschema2pojo.org/ }  to generate POJOs from this schema.",
-  "$comment": "TODO: include proper 'default' and 'description'.",
+  "$comment": "TODO: include proper 'default', 'dependencies' and 'description'.",
   "$schema": "http://json-schema.org/draft/2019-09/schema#",
 
   "type": "object",
@@ -59,6 +59,7 @@
           "shared"
         ]
       },
+      "$comment": "The 'core' platform gets added by default anyways. This is just for a quick setup.",
       "default": ["core"]
     },
 
